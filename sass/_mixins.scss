@@ -29,7 +29,9 @@
 }
 
 /* =======================================================================
-## ++ Fluid Typography
+ * ++ Fluid Typography
+ *
+ *  See _typography.scss for example usage
 ========================================================================== */
 
 @function strip-unit($value) {
@@ -62,8 +64,15 @@
   }
 }
 
-//  Mixin for fluid space
-//  $property: margin | padding
+/* =======================================================================
+ * ++ Fluid Spacing
+ *
+ *  $property = margin or padding 
+ *    or a sub-property like margin-top or pagging-left
+ *
+ *  See _typography.scss for example usage
+========================================================================== */
+
 @mixin fluid-space($min-vw, $max-vw, $min-space, $max-space, $property) {
   $u1: unit($min-vw);
   $u2: unit($max-vw);

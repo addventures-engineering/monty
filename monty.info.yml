@@ -1,11 +1,15 @@
-name: CVS IQ Purchasing
+name: Monty Theme
 type: theme
-base theme: classy
+# Set base theme by uncommenting one to the lines below
+#   or set your base theme on another theme
+# base theme: classy
+# base theme: stable
 
-Description: "A custom theme for CVS IQ Purchasing site"
+Description: "A custom base theme for Drupal 8"
 package: custom
 core: 8.x
 
+# Add additional third party libraries here
 libraries:
   - monty/global-css
   - monty/global-js
@@ -13,6 +17,7 @@ stylesheets-remove:
   - core/themes/stable/css/views/views.module.css
   - core/themes/stable/css/system/components/align.module.css
   
+# Customize Regions here
 regions:
   header: 'Header'
   hero: 'Hero section'

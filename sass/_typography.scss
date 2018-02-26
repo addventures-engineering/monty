@@ -1,11 +1,12 @@
-// Define Typography using fluid min & max 
-//    font-size and line-height values
-//    as well as min and max viewport size
+/*  Define Typography using fluid min & max 
+ *    font-size and line-height values
+ *    as well as min and max viewport size
+ */
 
 $min_width: 320px;
 $max_width: 1200px;
-$min_font_size: 22px;
-$max_font_size: 22px;
+$min_font_size: 16px;
+$max_font_size: 18px;
 $min_line_height: 1.35em;
 $max_line_height: 1.5em;
 
