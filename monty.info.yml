@@ -1,0 +1,20 @@
+name: CVS IQ Purchasing
+type: theme
+base theme: classy
+
+Description: "A custom theme for CVS IQ Purchasing site"
+package: custom
+core: 8.x
+
+libraries:
+  - monty/global-css
+  - monty/global-js
+stylesheets-remove:
+  - core/themes/stable/css/views/views.module.css
+  - core/themes/stable/css/system/components/align.module.css
+  
+regions:
+  header: 'Header'
+  hero: 'Hero section'
+  content: 'Main content'
+  footer: 'Footer'
