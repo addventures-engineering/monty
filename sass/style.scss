@@ -1,18 +1,39 @@
-/* Vendor */
+@charset 'utf-8';
 
+// 1. Configuration and helpers
+@import
+  'abstracts/colors',
+  'abstracts/variables',
+  'abstracts/functions',
+  'abstracts/mixins';
+  // 'abstracts/keyframes',
+  // 'abstracts/animations';
 
-/* Setup */
-@import "reset";
-@import "normalize";
-@import "mixins";
-@import "variables";
-@import "typography";
-@import "colors";
-@import "globals";
+// 2. Vendors
+@import
+  'vendors/reset',
+  'vendors/normalize';
 
+// 3. Base styling
+@import
+  'base/base',
+  'base/globals',
+  'base/typography';
 
-// Content
-@import "layout";
-@import "header";
-@import "hero";
-@import "footer";
+// 4. Layout-related styling
+@import
+  'layout/header', // should always be first
+  // 'layout/...',
+  'layout/footer'; // should always be last
+
+// 5. Components
+@import
+  'components/hero';
+
+// 6. Page-specific styling
+@import
+  'pages/home';
+
+// 7. Themes (might not be relevant)
+// @import
+//   'themes/...';
