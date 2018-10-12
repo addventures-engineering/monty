@@ -1,13 +1,10 @@
 name: Monty Theme
 type: theme
-# Set base theme by uncommenting one to the lines below
-#   or set your base theme on another theme
-# base theme: classy
-# base theme: stable
-
-Description: "A custom base theme for Drupal 8"
-package: custom
+description: "A custom base theme for Drupal 8"
 core: 8.x
+version: 8.x-0.1-alpha1
+base theme: classy
+package: custom
 
 # Add additional third party libraries here
 libraries:
