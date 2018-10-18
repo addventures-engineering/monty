@@ -2,19 +2,29 @@
 
 ## Installation and Setup
 
-1. Open a Drupal 8 installation directory on your computer
-2. Clone the repo into the folder: `<root-directory>/themes/custom/`
-3. Rename the folder `monty` to your desired custom theme name
-4. Rename the following files to replace `monty` with your custom theme name:
-    * `monty.info.yml`
-    * `monty.libraries.yml`
-    * `monty.theme`
+### Installing with Composer
 
-5. Replace the `monty` name used in the following files:
-    * `monty.theme` (default function uses `monty_preprocess`)
-    * `gulpfile.js` (replace `monty` from all directory references to the name of your custom theme folder)
+  1. Update your composer.json file with the following repository:
+      ```
+      "addventures/monty": {
+        "type": "vcs",
+        "url": "https://github.com/addventures/monty"
+      }
+      ```
+  2. Run `composer require addventures/monty:^0.1`
 
-6. Move the files `gulpfile.js` and `package.json` out of the custom theme folder and into the root folder of your Drupal 8 installation. (e.g. for Acquia sites it would be `/devdesktop/<sitename>/docroot/`)
 
-7. Replace Logo and Favicon in theme root
-8. Customize Fluid Typgraphy rhythym in the `_typography.scss` SASS module.
+### Installing manually
+
+  1. Open a Drupal 8 installation directory on your computer
+  2. Clone the repo into the folder: `<root-directory>/themes/custom/`
+  3. Run `npm install` to load all node dependencies
+  4. For development run `npm run dev` to kickoff webpack module bundler (does not minify during dev mode)
+  5. To bundle for prodution run `npm run build` to generate the JS and CSS bundles all minified with sourcemaps
+  6. 
+
+
+
+
+## Fluid Typography
+  Monty comes with a baseline implementation of fluid typography out of the box. Customizations can be made in the `_typography.scss` SASS module.
