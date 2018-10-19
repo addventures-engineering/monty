@@ -4,6 +4,9 @@
   "type": "drupal-theme",
   "license": "GPL-2.0",
   "homepage": "https://www.drupal.org/addventures/monty",
+  "require": {
+    "composer/installers": "~1.0"
+  },
   "authors": [
     {
       "name": "Addventures Engineering",
