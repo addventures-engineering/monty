@@ -1,8 +1,8 @@
 {
-  "name": "cvs-iqp-theme",
-  "version": "1.0.0",
-  "description": "Gulp dependencies for CVS IQP custom Drupal 8 theme",
-  "main": "gulpfile.js",
+  "name": "Monty",
+  "version": "1.1.0",
+  "description": "npm dependencies for custom Drupal 8 theme: Monty",
+  "main": "/src/main.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "webpack --mode=development",
