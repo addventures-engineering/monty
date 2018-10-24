@@ -1,4 +1,5 @@
 /* Main JS code */
+import "../sass/style.scss"
 
 (function ($, Drupal) {
   $(document).ready(function() {

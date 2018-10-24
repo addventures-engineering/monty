@@ -27,4 +27,4 @@
 
 
 ## Fluid Typography
-  Monty comes with a baseline implementation of fluid typography out of the box. Customizations can be made in the `_typography.scss` SASS module.
+  Monty comes with a baseline implementation of fluid typography out of the box. Customizations can be made in the `_typography.scss` SCSS module.
