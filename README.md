@@ -11,7 +11,7 @@
         "url": "https://github.com/addventures/monty"
       }
       ```
-  2. Run `composer require addventures/monty:^0.1`
+  2. Run `composer require addventures/monty`
 
 
 ### Installing manually
@@ -21,10 +21,9 @@
   3. Run `npm install` to load all node dependencies
   4. For development run `npm run dev` to kickoff webpack module bundler (does not minify during dev mode)
   5. To bundle for prodution run `npm run build` to generate the JS and CSS bundles all minified with sourcemaps
-  6. 
 
 
 
 
 ## Fluid Typography
-  Monty comes with a baseline implementation of fluid typography out of the box. Customizations can be made in the `_typography.scss` SCSS module.
+  Monty comes with a baseline implementation of fluid typography out of the box. Customizations can be made in the `_typography.scss` SCSS module. See [Verne Fluid Type](https://www.npmjs.com/package/verne-fluid-type) on npm.com for documentation.
