@@ -62,3 +62,6 @@ typings/
 
 # Ignore VSCode settings
 .vscode
+
+# Ignore dist folder of production ready bundles
+dist
