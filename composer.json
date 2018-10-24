@@ -1,0 +1,31 @@
+{
+  "name": "addventures/monty",
+  "description": "A minimal theme built by the team at Addventures that includes fluid typography and responsive layout.",
+  "type": "drupal-addventures-theme",
+  "license": "GPL-2.0",
+  "homepage": "https://www.drupal.org/addventures/monty",
+  "require": {
+    "composer/installers": "~1.0"
+  },
+  "authors": [
+    {
+      "name": "Addventures Engineering",
+      "homepage": "https://github.com/addventuresEngineering",
+      "role": "Maintainer"
+    },
+    {
+      "name": "Piotr Butkiewicz",
+      "homepage": "https://github.com/SpacemanPete",
+      "role": "Co-maintainer"
+    },
+    {
+      "name": "Richard Brum",
+      "homepage": "https://github.com/rbrum",
+      "role": "Co-maintainer"
+    }
+  ],
+  "support": {
+    "issues": "https://www.drupal.org/addventures/monty/issues",
+    "source": "https://github.com/addventures/monty"
+  }
+}
