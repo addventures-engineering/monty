@@ -2,7 +2,7 @@ name: Monty Theme
 type: theme
 description: "A custom base theme for Drupal 8"
 core: 8.x
-version: 8.x-0.1-beta5
+version: 8.x-0.1-beta6
 base theme: classy
 package: custom
 

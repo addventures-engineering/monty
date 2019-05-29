@@ -3,17 +3,17 @@
 ========================================================================== */
 
 /* 
-    Used for media queries. 
-    Add these mixins in your normal scss flow.
+  Used for media queries. 
+  Add these mixins in your normal scss flow.
+  
+  Eg.
+  .container{
+    width:1024px;
     
-    Eg.
-    .container{
-        width:1024px;
-        
-        @include tablets{
-            width:90%;
-        }
+    @include tablets{
+      width:90%;
     }
+  }
 */ 
 
 @mixin for-phone-only {
