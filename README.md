@@ -20,7 +20,7 @@
   2. Clone the repo into the folder: `<root-directory>/themes/custom/`
   3. Run `npm install` to load all node dependencies
   4. For development run `npm run dev` to kickoff webpack module bundler (does not minify during dev mode)
-  5. To bundle for prodution run `npm run build` to generate the JS and CSS bundles all minified with sourcemaps
+  5. To bundle for production run `npm run build` to generate the JS and CSS bundles all minified with sourcemaps
 
 
 
