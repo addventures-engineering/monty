@@ -7,10 +7,10 @@ use Drupal\Core\Url;
 
 /**
  * Implements hook_preprocess().
- * Function to make the 'is_front' variable 
+ * Function to make the 'is_front' variable
  * available in all Twig templates
  */
-function monty_preprocess(&$variables, $hook) {
+function accord_preprocess(&$variables, $hook) {
   try {
     $variables['is_front'] = \Drupal::service('path.matcher')->isFrontPage();
   }
@@ -24,14 +24,14 @@ function monty_preprocess(&$variables, $hook) {
 /**
  * Implements hook_preprocess_block().
  */
-function addventures_preprocess_block(&$variables) {
+function accord_preprocess_block(&$variables) {
   $variables['content']['#attributes']['block'] = $variables['attributes']['id'];
 }
 
 /**
  * Implements hook_theme_suggestions_HOOK_alter().
  */
-function addventures_theme_suggestions_menu_alter(array &$suggestions, array $variables) {
+function accord_theme_suggestions_menu_alter(array &$suggestions, array $variables) {
   // Remove the block and replace dashes with underscores in the block ID to
   // use for the hook name.
   if (isset($variables['attributes']['block'])) {

@@ -1,42 +1,100 @@
-/* =======================================================================
-## ++ Media Queries
-========================================================================== */
+// Media queries
+// w = current viewport width
 
-/* 
-  Used for media queries. 
-  Add these mixins in your normal scss flow.
-  
-  Eg.
-  .container{
-    width:1024px;
-    
-    @include tablets{
-      width:90%;
-    }
+// 0 < w < 600
+@mixin for-phone {
+  @media (max-width: $bp-phone-max) {
+    @content;
   }
-*/ 
+}
 
-@mixin for-phone-only {
-  @media (max-width: 599px) { @content; }
+// 600 <= w < 900
+@mixin for-tablet-sm {
+  @media (min-width: $bp-tablet-sm-min) and (max-width: $bp-tablet-sm-max) {
+    @content;
+  }
 }
-@mixin for-tablet-portrait-up {
-  @media (min-width: 600px) { @content; }
+
+// 900 <= w < 1260
+@mixin for-tablet-lg {
+  @media (min-width: $bp-tablet-lg-min) and (max-width: $bp-tablet-lg-max) {
+    @content;
+  }
 }
-@mixin for-tablet-portait-only {
-  @media (min-width: 600px) and (max-width: 899px) { @content; }
+
+// 1260 <= w < 1800
+@mixin for-desktop {
+  @media (min-width: $bp-desktop-min) and (max-width: $bp-dekstop-max) {
+    @content;
+  }
 }
-@mixin for-tablet-landscape-up {
-  @media (min-width: 900px) { @content; }
+
+// 1800 <= w
+@mixin for-widescreen {
+  @media (min-width: $bp-wide-min) {
+    @content;
+  }
 }
-@mixin for-tablet-landscape-only {
-  @media (min-width: 900px) and (max-width: 1199px) { @content; }
+
+// 0 < w < 900
+@mixin for-device-sm { // for: phone, tablet-sm
+  @media (max-width: $bp-tablet-sm-max) {
+    @content;
+  }
 }
-@mixin for-desktop-up {
-  @media (min-width: 1200px) { @content; }
+
+// 900 <= w
+@mixin for-tablet-lg-up {
+  @media (min-width: $bp-tablet-lg-min) {
+    @content;
+  }
 }
-@mixin for-desktop-only {
-  @media (min-width: 1200px) and (max-width: 1799px) { @content; }
+
+// 0 < w < 1260
+@mixin for-device-lg { // for: phone, tablet-sm, tablet-lg
+  @media (max-width: $bp-tablet-lg-max) {
+    @content;
+  }
 }
-@mixin for-big-desktop-up {
-  @media (min-width: 1800px) { @content; }
+
+// 1260 <= w
+@mixin for-dekstop-up {
+  @media (min-width: $bp-desktop-min) {
+    @content;
+  }
+}
+
+// 0 < w < 1800
+@mixin for-smaller-dekstop { // for: phone, tablet-sm, tablet-lg, desktop
+  @media (max-width: $bp-dekstop-max) {
+    @content;
+  }
+}
+
+// 600 <= w < 1260
+@mixin for-tablet { // for: tablet-sm, tablet-lg
+  @media (min-width: $bp-tablet-sm-min) and (max-width: $bp-tablet-lg-max) {
+    @content;
+  }
+}
+
+// 600 <= w < 1800
+@mixin for-tablet-and-desktop { // for: tablet-sm, tablet-lg, desktop
+  @media (min-width: $bp-tablet-sm-min) and (max-width: $bp-dekstop-max) {
+    @content;
+  }
+}
+
+// 600 <= w
+@mixin for-tablet-up { // for: tablet-sm, tablet-lg, desktop, wide
+  @media (min-width: $bp-tablet-sm-min) {
+    @content;
+  }
+}
+
+// 900 <= w < 1800
+@mixin for-tablet-lg-and-desktop { // for: tablet-lg, desktop
+  @media (min-width: $bp-tablet-lg-min) and (max-width: $bp-dekstop-max) {
+    @content;
+  }
 }
