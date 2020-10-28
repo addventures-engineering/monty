@@ -64,4 +64,5 @@ typings/
 .vscode
 
 # Ignore dist folder of production ready bundles
-dist
+# disable until Acquia Pipelines is configured to deploy build artifacts
+# dist
