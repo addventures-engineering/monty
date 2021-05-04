@@ -6,9 +6,9 @@
 
   1. Update your composer.json file with the following repository:
       ```
-      "addventures/monty": {
+      "addventures-engineering/monty": {
         "type": "vcs",
-        "url": "https://github.com/addventures/monty"
+        "url": "https://github.com/addventures-engineering/monty"
       }
       ```
   2. Run `composer require addventures/monty`
