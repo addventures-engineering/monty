@@ -1,0 +1,13 @@
+// Breakpoint variables
+$bp-tablet-sm-min: 600px;
+$bp-tablet-lg-min: 900px;
+$bp-desktop-min:   1260px; // 1220px + 20px side padding (x2)
+$bp-wide-min:      1800px;
+
+$bp-phone-max:     ($bp-tablet-sm-min - 1);
+$bp-tablet-sm-max: ($bp-tablet-lg-min - 1);
+$bp-tablet-lg-max: ($bp-desktop-min   - 1);
+$bp-dekstop-max:   ($bp-wide-min      - 1);
+
+// Other variables
+// ...
