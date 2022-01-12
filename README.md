@@ -18,7 +18,7 @@
 
   1. Open the Drupal site's `docroot` folder
   2. Clone the Monty repo into the following folder: `<root-directory>/themes/custom/`
-    * **NOTE:** You can also download the repo's .ZIP file and unpack it into the above folder
+      * **NOTE:** You can also download the repo's .ZIP file and unpack it into the above folder
   3. Delete the `.git` folder so that Git does not recognize this as a submodule of the larger site
   4. Run `npm install` to load all node dependencies
   5. For development run `npm run build:dev` to kickoff the Webpack module bundler (does not minify files in dev mode)
