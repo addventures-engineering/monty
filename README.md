@@ -1,10 +1,10 @@
-# Monty: A custom Drupal 8 starter theme with Fluid Typography, Sass, and Gulp
+# Monty: A custom Drupal 9 starter theme with Fluid Typography, Sass, and Gulp
 
 ## Installation and Setup
 
 ### Installing with Composer
 
-  1. Update your composer.json file with the following repository:
+  1. Update your `composer.json` file with the following repository:
       ```
       "addventures-engineering/monty": {
         "type": "vcs",
@@ -14,15 +14,15 @@
   2. Run `composer require addventures/monty`
 
 
-### Installing manually
+### Installing Manually
 
-  1. Open a Drupal 8 installation directory on your computer
-  2. Clone the repo into the folder: `<root-directory>/themes/custom/`
-  3. Run `npm install` to load all node dependencies
-  4. For development run `npm run dev` to kickoff webpack module bundler (does not minify during dev mode)
-  5. To bundle for production run `npm run build` to generate the JS and CSS bundles all minified with sourcemaps
-
-
+  1. Open the Drupal site's `docroot` folder
+  2. Clone the Monty repo into the following folder: `<root-directory>/themes/custom/`
+    * **NOTE:** You can also download the repo's .ZIP file and unpack it into the above folder
+  3. Delete the `.git` folder so that Git does not recognize this as a submodule of the larger site
+  4. Run `npm install` to load all node dependencies
+  5. For development run `npm run build:dev` to kickoff the Webpack module bundler (does not minify files in dev mode)
+  6. To bundle for production run `npm run build:prod` to generate the JS and CSS bundles all minified with sourcemaps
 
 
 ## Fluid Typography
