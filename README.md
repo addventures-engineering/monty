@@ -11,7 +11,7 @@
         "url": "https://github.com/addventures-engineering/monty"
       }
       ```
-  2. Run `composer require addventures/monty`
+  2. Run `composer require addventures-engineering/monty`
 
 
 ### Installing Manually
