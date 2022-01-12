@@ -1,9 +1,8 @@
 const path = require("path")
 const MiniCssExtractPlugin = require("mini-css-extract-plugin")
 const postcssPresetEnv = require("postcss-preset-env")
-// We are getting 'process.env.NODE_ENV' from the NPM scripts
-// Remember the 'dev' script?
-const devMode = process.env.NODE_ENV !== "production"
+
+const devMode = "production"
 
 const outpuDir = './dist'
 const entry = './src/js/main.js'
@@ -13,7 +12,11 @@ module.exports = {
 
   // Tells Webpack which built-in optimizations to use
   // If you leave this out, Webpack will default to 'production'
-  mode: devMode ? "development" : "production",
+  mode: devMode,
+
+  optimization: {
+    nodeEnv: devMode
+  },
 
   // Webpack needs to know where to start the bundling process,
   // so we define the Sass file under './Styles' directory
@@ -32,7 +35,7 @@ module.exports = {
 
     // The name of the output bundle. Path is also relative
     // to the output path, so './dist/js'
-    filename: "js/[name].min.js"
+    filename: "js/main.min.js"
   },
   module: {
 
@@ -44,8 +47,7 @@ module.exports = {
         // "oneOf" will traverse all following loaders until one will
         // match the requirements. When no loader matches it will fall
         // back to the "file" loader at the end of the loader list.
-        oneOf: [
-          {
+        oneOf: [{
             // Transpile JavaScript using babel
             test: /\.js$/,
             exclude: [/[/\\\\]node_modules[/\\\\]/],
@@ -58,8 +60,7 @@ module.exports = {
 
             // Use the following loaders from right-to-left, so it will
             // use sass-loader first and ending with MiniCssExtractPlugin
-            use: [
-              {
+            use: [{
                 // Extracts the CSS into a separate file and uses the
                 // defined configurations in the 'plugins' section
                 loader: MiniCssExtractPlugin.loader
@@ -83,16 +84,7 @@ module.exports = {
                   // anything.
                   plugins: [
                     require('postcss-flexbugs-fixes'),
-                    require('autoprefixer')({
-                      'grid': true,
-                      'browsers': [
-                        ">1%",
-                        "last 4 versions",
-                        "Firefox ESR",
-                        "not ie < 11"
-                      ],
-                      flexbox: 'no-2009',
-                    }),
+                    require('autoprefixer'),
                   ]
                 }
               },
@@ -107,30 +99,28 @@ module.exports = {
             // Adds support to load images in your CSS rules. It looks for
             // .png, .jpg, .jpeg and .gif
             test: /\.(png|jpe?g|gif)$/,
-            use: [
-              {
-                loader: "file-loader",
-                options: {
+            use: [{
+              loader: "file-loader",
+              options: {
 
-                  // The image will be named with the original name and
-                  // extension
-                  name: "[name].[ext]",
+                // The image will be named with the original name and
+                // extension
+                name: "[name].[ext]",
 
-                  // Indicates where the images are stored and will use
-                  // this path when generating the CSS files.
-                  // Example, in site.scss I have
-                  // url('../resources/images/pattern.png') and when generating
-                  // the CSS file, file-loader will output as
-                  // url(../images/pattern.png), which is relative
-                  // to '/css/site.css'
-                  publicPath: "../images",
+                // Indicates where the images are stored and will use
+                // this path when generating the CSS files.
+                // Example, in site.scss I have
+                // url('../resources/images/pattern.png') and when generating
+                // the CSS file, file-loader will output as
+                // url(../images/pattern.png), which is relative
+                // to '/css/site.css'
+                publicPath: "../images",
 
-                  // When this option is 'true', the loader will emit the
-                  // image to output.path
-                  emitFile: false
-                }
+                // When this option is 'true', the loader will emit the
+                // image to output.path
+                emitFile: false
               }
-            ]
+            }]
           }
         ]
       }

@@ -1,12 +1,10 @@
 global-css:
   css:
     theme:
-      dist/css/style.css: {}      # dev
-      dist/css/style.min.css: {}  # prod
+      dist/css/style.min.css: {}
 
 global-js:
   js:
-    dist/js/main.js: {}           # dev
-    dist/js/main.min.js: {}       # prod
+    dist/js/main.min.js: {}
   dependencies:
     - core/jquery

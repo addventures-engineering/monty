@@ -1,8 +1,7 @@
 name: Monty Theme
 type: theme
-description: "A custom base theme for Drupal 8"
-core: 8.x
-version: 8.x-0.1-beta6
+description: "A custom base theme for Drupal 9"
+core_version_requirement: ^8.8 || ^9
 base theme: classy
 package: custom
 
@@ -13,7 +12,7 @@ libraries:
 stylesheets-remove:
   - core/themes/stable/css/views/views.module.css
   - core/themes/stable/css/system/components/align.module.css
-  
+
 # Customize Regions here
 regions:
   header: 'Header'
